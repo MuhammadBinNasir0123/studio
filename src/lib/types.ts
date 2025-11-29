@@ -24,7 +24,7 @@ export interface Activity {
   notes?: string;
 }
 
-export type HealthRecordType = 'Vaccination' | 'Vet Visit' | 'Medication';
+export type HealthRecordType = 'Vaccination' | 'Vet Visit' | 'Medication' | 'Infection' | 'Disease';
 export interface HealthRecord {
   id: string;
   petId: string;

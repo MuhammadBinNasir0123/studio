@@ -4,7 +4,7 @@ export const sampleUser: User = {
   uid: 'mock-user-id-123',
   email: 'alex@example.com',
   displayName: 'Alex Doe',
-  photoURL: 'https://picsum.photos/seed/user/100/100',
+  photoURL: 'https://i.pravatar.cc/150?u=a042581f4e29026704d',
 };
 
 export const samplePets: Pet[] = [
@@ -14,8 +14,8 @@ export const samplePets: Pet[] = [
     breed: 'Golden Retriever',
     age: 5,
     weight: 28,
-    photoUrl: 'https://picsum.photos/seed/buddy/400/400',
-    photoHint: 'golden retriever',
+    photoUrl: 'https://images.unsplash.com/photo-1552053831-71594a27632d?q=80&w=1924&auto=format&fit=crop',
+    photoHint: 'golden retriever dog',
   },
   {
     id: 'luna',
@@ -23,7 +23,7 @@ export const samplePets: Pet[] = [
     breed: 'Siamese',
     age: 3,
     weight: 5,
-    photoUrl: 'https://picsum.photos/seed/luna/400/400',
+    photoUrl: 'https://images.unsplash.com/photo-1596854407944-bf87f6fdd49e?q=80&w=2080&auto=format&fit=crop',
     photoHint: 'siamese cat',
   },
   {
@@ -32,7 +32,7 @@ export const samplePets: Pet[] = [
     breed: 'Terrier Mix',
     age: 7,
     weight: 12,
-    photoUrl: 'https://picsum.photos/seed/rocky/400/400',
+    photoUrl: 'https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?q=80&w=1964&auto=format&fit=crop',
     photoHint: 'terrier dog',
   }
 ];
@@ -48,6 +48,7 @@ export const sampleHealthRecords: HealthRecord[] = [
   { id: 'hr1', petId: 'buddy', type: 'Vaccination', date: new Date('2023-05-20').toISOString(), details: 'Rabies booster', vetName: 'Dr. Smith' },
   { id: 'hr2', petId: 'luna', type: 'Vet Visit', date: new Date('2024-01-10').toISOString(), details: 'Annual check-up', vetName: 'Dr. Anya' },
   { id: 'hr3', petId: 'buddy', type: 'Medication', date: new Date(Date.now() - 86400000 * 5).toISOString(), details: 'Flea & tick treatment' },
+  { id: 'hr4', petId: 'buddy', type: 'Infection', date: new Date('2024-03-15').toISOString(), details: 'Ear infection, right ear. Prescribed drops.', vetName: 'Dr. Smith' },
 ];
 
 export const sampleReminders: Reminder[] = [

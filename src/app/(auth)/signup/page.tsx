@@ -7,18 +7,31 @@ import { Button } from "@/components/ui/button";
 import { CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Loader2 } from "lucide-react";
 import { useRouter } from 'next/navigation';
+import { useToast } from '@/hooks/use-toast';
+
 
 export default function SignupPage() {
   const { signup, loading } = useAuth();
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
   const [name, setName] = React.useState('');
+  const [isHuman, setIsHuman] = React.useState(false);
   const router = useRouter();
+  const { toast } = useToast();
 
   const handleSignup = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!isHuman) {
+      toast({
+        variant: 'destructive',
+        title: 'Verification Failed',
+        description: 'Please confirm you are human.',
+      });
+      return;
+    }
     try {
       await signup(email, password);
       router.push('/dashboard');
@@ -47,6 +60,12 @@ export default function SignupPage() {
             <div className="flex flex-col space-y-1.5">
               <Label htmlFor="password">Password</Label>
               <Input id="password" type="password" placeholder="••••••••" value={password} onChange={(e) => setPassword(e.target.value)} required disabled={loading} />
+            </div>
+             <div className="flex items-center space-x-2">
+              <Checkbox id="is-human" checked={isHuman} onCheckedChange={(checked) => setIsHuman(checked as boolean)} disabled={loading} />
+              <Label htmlFor="is-human" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                I am human
+              </Label>
             </div>
           </div>
           <Button className="w-full mt-6" type="submit" disabled={loading}>
