@@ -66,7 +66,7 @@ const recommendationPrompt = ai.definePrompt({
   `,
 });
 
-export const petRecommendationFlow = ai.defineFlow(
+const flow = ai.defineFlow(
   {
     name: 'petRecommendationFlow',
     inputSchema: PetRecommendationFlowInputSchema,
@@ -77,3 +77,7 @@ export const petRecommendationFlow = ai.defineFlow(
     return output!;
   }
 );
+
+export async function petRecommendationFlow(input: PetRecommendationFlowInput): Promise<PetRecommendationFlowOutput> {
+  return flow(input);
+}
