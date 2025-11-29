@@ -4,7 +4,7 @@ export const sampleUser: User = {
   uid: 'mock-user-id-123',
   email: 'alex@example.com',
   displayName: 'Alex Doe',
-  photoURL: 'https://i.pravatar.cc/150?u=a042581f4e29026704d',
+  photoURL: 'https://images.unsplash.com/photo-1521566652839-697aa473761a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cGVyc29ufGVufDB8fHx8MTc2NDMzNTM5Nnww&ixlib=rb-4.1.0&q=80&w=1080',
 };
 
 export const samplePets: Pet[] = [
