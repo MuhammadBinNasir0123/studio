@@ -9,6 +9,7 @@ import { samplePets } from '@/lib/data';
 import type { Pet } from '@/lib/types';
 import PetCard from '@/components/dashboard/pet-card';
 import AddPetDialog from '@/components/dashboard/add-pet-dialog';
+import AiAssistantCard from '@/components/dashboard/ai-assistant-card';
 
 export default function DashboardPage() {
   const { user } = useAuth();
@@ -26,8 +27,8 @@ export default function DashboardPage() {
   };
 
   return (
-    <div className="p-4 sm:p-6">
-      <header className="flex items-center justify-between mb-6">
+    <div className="p-4 sm:p-6 space-y-6">
+      <header className="flex items-center justify-between">
         <div className="flex items-center gap-3">
           {user?.photoURL && (
             <Image
@@ -48,6 +49,8 @@ export default function DashboardPage() {
           <span className="sr-only">Add Pet</span>
         </Button>
       </header>
+
+      <AiAssistantCard pets={pets} />
 
       <section>
         <h2 className="text-lg font-semibold font-headline mb-4">Your Pets</h2>
