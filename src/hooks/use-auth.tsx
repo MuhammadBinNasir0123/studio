@@ -23,9 +23,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const pathname = usePathname();
 
   useEffect(() => {
-    const storedUser = sessionStorage.getItem('petpal-user');
-    if (storedUser) {
-      setUser(JSON.parse(storedUser));
+    // NOTE: Removed session storage to prevent stale data issues.
+    // Simulating a session check. In a real app, this would be a token check.
+    if (user) {
+        setUser(user);
     }
     setLoading(false);
   }, []);
@@ -40,7 +41,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     setLoading(true);
     await new Promise(res => setTimeout(res, 1000)); // Simulate API call
     setUser(sampleUser);
-    sessionStorage.setItem('petpal-user', JSON.stringify(sampleUser));
     setLoading(false);
     router.push('/dashboard');
   };
@@ -57,7 +57,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     setLoading(true);
     await new Promise(res => setTimeout(res, 500));
     setUser(null);
-    sessionStorage.removeItem('petpal-user');
     setLoading(false);
     router.push('/login');
   };
