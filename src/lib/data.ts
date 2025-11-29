@@ -54,6 +54,6 @@ export const sampleHealthRecords: HealthRecord[] = [
 export const sampleReminders: Reminder[] = [
   { id: 'rem1', petId: 'buddy', type: 'Feeding', time: '08:00', frequency: 'Daily', notes: '1 cup of kibble' },
   { id: 'rem2', petId: 'buddy', type: 'Feeding', time: '18:00', frequency: 'Daily' },
-  { id: 'rem3', petId: 'luna', type: 'Medication', time: '10:00', frequency: 'Daily', notes: 'Thyroid pill' },
+  { id: 'rem3', petId: 'luna', type: 'Medication', time: '10:00', frequency: 'Daily', notes: 'Thyroid pill', isImportant: true },
   { id: 'rem4', petId: 'rocky', type: 'Walking', time: '19:00', frequency: 'Daily' },
 ];

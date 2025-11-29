@@ -42,4 +42,5 @@ export interface Reminder {
   time: string; // "HH:mm"
   frequency: string; // "Daily", "Weekly", etc.
   notes?: string;
+  isImportant?: boolean;
 }
