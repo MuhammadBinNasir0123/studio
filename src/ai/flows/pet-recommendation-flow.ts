@@ -17,13 +17,13 @@ const PetSchema = z.object({
   weight: z.number().describe('The weight of the pet in kilograms.'),
 });
 
-export const PetRecommendationFlowInputSchema = z.object({
+const PetRecommendationFlowInputSchema = z.object({
   pet: PetSchema,
   symptoms: z.string().optional().describe('Any symptoms the pet is experiencing. This is optional.'),
 });
 export type PetRecommendationFlowInput = z.infer<typeof PetRecommendationFlowInputSchema>;
 
-export const PetRecommendationFlowOutputSchema = z.object({
+const PetRecommendationFlowOutputSchema = z.object({
   recommendation: z.string().describe('The generated recommendation for the pet.'),
 });
 export type PetRecommendationFlowOutput = z.infer<typeof PetRecommendationFlowOutputSchema>;

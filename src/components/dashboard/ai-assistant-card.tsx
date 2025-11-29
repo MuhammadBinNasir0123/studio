@@ -108,9 +108,6 @@ export default function AiAssistantCard({ pets }: AiAssistantCardProps) {
           <div className="p-4 bg-muted/50 rounded-lg text-sm">
             <p className="font-semibold mb-2">💡 Recommendation:</p>
             <p className="text-muted-foreground whitespace-pre-wrap">{recommendation}</p>
-            <p className="text-xs text-muted-foreground/80 mt-4">
-              Disclaimer: This is an AI suggestion and not a substitute for professional veterinary advice.
-            </p>
           </div>
         )}
       </CardContent>
