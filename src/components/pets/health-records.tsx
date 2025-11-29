@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { PlusCircle, MoreVertical, Syringe, Stethoscope, Pill, Virus, Microscope } from 'lucide-react';
+import { PlusCircle, MoreVertical, Syringe, Stethoscope, Pill, Bug, Microscope } from 'lucide-react';
 import type { HealthRecord, HealthRecordType } from '@/lib/types';
 import AddRecordDialog from './add-record-dialog';
 import { format } from 'date-fns';
@@ -18,7 +18,7 @@ const recordIcons: Record<HealthRecordType, React.ReactNode> = {
   'Vaccination': <Syringe className="h-5 w-5 text-red-500" />,
   'Vet Visit': <Stethoscope className="h-5 w-5 text-blue-500" />,
   'Medication': <Pill className="h-5 w-5 text-green-500" />,
-  'Infection': <Virus className="h-5 w-5 text-orange-500" />,
+  'Infection': <Bug className="h-5 w-5 text-orange-500" />,
   'Disease': <Microscope className="h-5 w-5 text-purple-500" />,
 };
 
