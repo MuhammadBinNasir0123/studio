@@ -37,7 +37,7 @@ export function StatsView({ activities, healthRecords }: StatsViewProps) {
       return {
         date: format(day, 'MMM d'),
         walk: dayActivities.filter(a => a.type === 'Walk').length,
-        meal: dayActivities.filter(a => a type === 'Meal').length,
+        meal: dayActivities.filter(a => a.type === 'Meal').length,
       };
     });
   }, [activities]);
