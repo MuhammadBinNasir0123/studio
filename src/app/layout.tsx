@@ -4,7 +4,7 @@ import { Toaster } from "@/components/ui/toaster";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "PetPal",
+  title: "MyPetcare app",
   description: "Your best friend's best friend.",
 };
 

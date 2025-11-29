@@ -44,7 +44,7 @@ export default function SignupPage() {
     <>
       <CardHeader className="text-center">
         <CardTitle className="text-2xl font-headline">Create an Account</CardTitle>
-        <CardDescription>Join PetPal to start managing your pets</CardDescription>
+        <CardDescription>Join MyPetcare app to start managing your pets</CardDescription>
       </CardHeader>
       <CardContent>
         <form onSubmit={handleSignup}>

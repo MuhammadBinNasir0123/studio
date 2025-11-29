@@ -33,7 +33,7 @@ const recommendationPrompt = ai.definePrompt({
   input: { schema: PetRecommendationFlowInputSchema },
   output: { schema: PetRecommendationFlowOutputSchema },
   prompt: `
-    You are an AI assistant for a pet care app called PetPal. Your goal is to provide helpful, safe, and informative recommendations for pet owners.
+    You are an AI assistant for a pet care app called MyPetcare app. Your goal is to provide helpful, safe, and informative recommendations for pet owners.
 
     Pet Details:
     - Name: {{pet.name}}

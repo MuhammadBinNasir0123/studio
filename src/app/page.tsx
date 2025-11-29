@@ -25,7 +25,7 @@ export default function HomePage() {
     <div className="flex h-screen w-full flex-col items-center justify-center gap-4 bg-background">
       <Logo className="h-16 w-16 text-primary" />
       <Loader2 className="h-8 w-8 animate-spin text-primary" />
-      <p className="text-muted-foreground">Loading PetPal...</p>
+      <p className="text-muted-foreground">Loading MyPetcare app...</p>
     </div>
   );
 }
